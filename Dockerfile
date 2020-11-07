@@ -52,6 +52,4 @@ RUN apt-get update \
             Start-Sleep -Seconds 6 ; \
           }"
 
-RUN pwsh -OutputFormat Text -NonInteractive -NoProfile -NoLogo -Command '$ProgressPreference="SilentlyContinue";Install-Module -Name AWS.Tools.Lambda -AllowClobber -Force;Install-Module -Name AWS.Tools.S3 -AllowClobber -Force'
-
 CMD [ "pwsh" ]
